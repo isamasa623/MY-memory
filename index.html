@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Wedding Memory</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Noto+Serif+JP:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- パスワード画面 -->
+  <div id="password-screen">
+    <div class="password-box">
+      <div class="pw-deco">❧</div>
+      <h1 class="pw-title">Our Wedding Memory</h1>
+      <p class="pw-sub">ご家族・ご友人の方のみご覧いただけます</p>
+      <div class="pw-row">
+        <input type="password" id="pw-input" placeholder="パスワードを入力" autocomplete="off" />
+        <button id="pw-btn">Enter</button>
+      </div>
+      <p id="pw-error"></p>
+    </div>
+  </div>
+
+  <!-- メインコンテンツ -->
+  <div id="main-content" class="hidden">
+
+    <!-- ナビゲーション -->
+    <nav id="navbar">
+      <div class="nav-inner">
+        <a href="#hero" class="nav-logo">Our Memory</a>
+        <ul class="nav-links">
+          <li><a href="#story">Story</a></li>
+          <li><a href="#wedding">Wedding</a></li>
+          <li><a href="#honeymoon">Honeymoon</a></li>
+          <li><a href="#memories">Memories</a></li>
+        </ul>
+        <button class="nav-menu-btn" id="nav-menu-btn" aria-label="メニュー">☰</button>
+      </div>
+      <ul class="nav-links-mobile hidden" id="nav-mobile">
+        <li><a href="#story" class="nav-mobile-link">Story</a></li>
+        <li><a href="#wedding" class="nav-mobile-link">Wedding</a></li>
+        <li><a href="#honeymoon" class="nav-mobile-link">Honeymoon</a></li>
+        <li><a href="#memories" class="nav-mobile-link">Memories</a></li>
+      </ul>
+    </nav>
+
+    <!-- ヒーロー -->
+    <section id="hero">
+      <div class="hero-inner">
+        <p class="hero-date">2025 . 03 . 09</p>
+        <h1 class="hero-names">
+          <!-- ★ お二人のお名前に変更してください ★ -->
+          〇〇 <span class="amp">&</span> 〇〇
+        </h1>
+        <p class="hero-msg">ふたりの記念を、ここに</p>
+        <div class="hero-line"></div>
+      </div>
+      <div class="hero-leaf hero-leaf-tl"></div>
+      <div class="hero-leaf hero-leaf-br"></div>
+    </section>
+
+    <!-- Our Story -->
+    <section id="story">
+      <div class="sec-inner">
+        <h2 class="sec-title">Our Story</h2>
+        <div class="sec-deco">✦</div>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-date">2025.03.09</div>
+            <div class="tl-dot"></div>
+            <div class="tl-body">
+              <h3>入籍</h3>
+              <p>ふたりの新しい出発の日</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-date">2025.11</div>
+            <div class="tl-dot"></div>
+            <div class="tl-body">
+              <h3>新婚旅行 — 四国</h3>
+              <p>ふたりで巡った四国の旅</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-date">2026.03.08</div>
+            <div class="tl-dot"></div>
+            <div class="tl-body">
+              <h3>Wedding Party</h3>
+              <p>大切な人たちとの特別な一日</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Wedding Party -->
+    <section id="wedding" class="bg-beige">
+      <div class="sec-inner">
+        <h2 class="sec-title">Wedding Party</h2>
+        <p class="sec-sub">2026 . 03 . 08</p>
+        <div class="sec-deco">✦</div>
+        <div id="gallery-wedding" class="photo-grid"></div>
+        <p class="gallery-status" id="status-wedding">写真を読み込み中...</p>
+      </div>
+    </section>
+
+    <!-- Honeymoon -->
+    <section id="honeymoon">
+      <div class="sec-inner">
+        <h2 class="sec-title">Honeymoon</h2>
+        <p class="sec-sub">2025 . 11 — 四国</p>
+        <div class="sec-deco">✦</div>
+        <div id="gallery-honeymoon" class="photo-grid"></div>
+        <p class="gallery-status" id="status-honeymoon">写真を読み込み中...</p>
+      </div>
+    </section>
+
+    <!-- Family Memories -->
+    <section id="memories" class="bg-beige">
+      <div class="sec-inner">
+        <h2 class="sec-title">Family Memories</h2>
+        <p class="sec-sub">これからの日々</p>
+        <div class="sec-deco">✦</div>
+        <div id="gallery-memories" class="photo-grid"></div>
+        <p class="gallery-status" id="status-memories"></p>
+      </div>
+    </section>
+
+    <footer>
+      <!-- ★ お二人のお名前に変更してください ★ -->
+      <p>〇〇 &amp; 〇〇 &ensp;—&ensp; 2025 . 03 . 09 〜</p>
+    </footer>
+
+  </div>
+
+  <!-- ライトボックス -->
+  <div id="lightbox" class="hidden">
+    <div class="lb-bg"></div>
+    <button class="lb-btn" id="lb-close" aria-label="閉じる">×</button>
+    <button class="lb-btn lb-prev" id="lb-prev" aria-label="前の写真">‹</button>
+    <img id="lb-img" src="" alt="wedding photo">
+    <button class="lb-btn lb-next" id="lb-next" aria-label="次の写真">›</button>
+    <p id="lb-counter" class="lb-counter"></p>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
